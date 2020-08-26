@@ -18,7 +18,8 @@ You are now ready to set the environment variables from the appropriate env file
 e.g. set -a && . environment/dev/dev.env && set +a
 
 ### Deploy
-Create the remote storage infrastructure. This is a one time initialization of the storage and the state is stored in teh local folder.
+Create the remote storage infrastructure. 
+This is a one time initialization of the storage and the state is stored in teh local folder.
 1. Navigate to the 01_init folder
 1. $ terraform init
 1. $ terraform plan
