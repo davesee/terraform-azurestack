@@ -1,11 +1,11 @@
 # terraform-azurestack
-##Descrption
+## Descrption
 Terraform azurerm provider using local Azure stack for public and usgov endpoints.
 
-##Local development environment
+## Local development environment
 Repo running on WSL 2 Ubuntu 18.04
 
-##Setup
+## Setup
 ### Configure
 Update the environment *.env files to point to the full path of the *.json endpoint files.
 NOTE: using a Windows mounted path from WSL does not work.
