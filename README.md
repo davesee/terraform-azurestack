@@ -38,7 +38,7 @@ Confirm by accessing the Azure portal\
 Resource group: azstack-remote-state\
 Storage account: azstackstore\
 Container: azstfrs\
-Blob: 02_base/01_net (https://azstackstore.blob.core.windows.net/azstfrs/02_base/01_net)
+Blob: 02_base/01_net (https://yourstorename.blob.core.windows.net/azstfrs/02_base/01_net)
 
 ### Destroy
 To remove the resources, run this command in the each folder, in reverse order.
