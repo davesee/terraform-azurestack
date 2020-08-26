@@ -10,7 +10,7 @@ Repo running on WSL 2 Ubuntu 18.04
 1. Update the environment *.env files to point to the full path of the *.json endpoint files.
 1. Update the environment *.env files with the TF_VAR_SUBSCRIPTION_ID, TF_VAR_TENANT_ID and TF_VAR_LOCATION.
 1. Update the TF_VAR_BACKEND_STORAGE_ACCOUNT_NAME since this is globally unique for each cloud instance.
-1. You are now ready to set the environment variables from the appropriate env file.
+1. You are now ready to set the environment variables from the appropriate env file.\
 set -a && . environment/dev/dev.env && set +a
 
 Note: using a Windows mounted path from WSL does not work in step 1.
