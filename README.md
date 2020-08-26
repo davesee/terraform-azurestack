@@ -34,6 +34,17 @@ Access key
 1. $ terraform apply --auto-approve
 1. The remote state is updated with the state of this terraform
 
+Note: The access key should be placed in Azure Key vault or passed in using the terraform init reconfigure command.
+```
+terraform init -reconfigure \
+    -backend-config="subscription_id=${TF_VAR_SUBSCRIPTION_ID}" \
+    -backend-config="resource_group_name=${TF_VAR_BACKEND_RESOURCE_GROUP_NAME}" \
+    -backend-config="storage_account_name=${TF_VAR_BACKEND_STORAGE_ACCOUNT_NAME}" \
+    -backend-config="container_name=${TF_VAR_BACKEND_CONTAINER_NAME}" \
+    -backend-config="key=02_base/01_net" \
+    -backend-config="access_key=ReplaceMeWithTheAccessKeyFromAzureStorageAccountLength88CharsHere=="
+```
+
 Confirm by accessing the Azure portal\
 Resource group: azstack-remote-state\
 Storage account: azstackstore\
