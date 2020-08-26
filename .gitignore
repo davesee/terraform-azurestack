@@ -1,15 +1,33 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+### VSCode ###
+**/.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Test binary, built with `go test -c`
-*.test
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+/secrets
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+### Terraform ###
+**/.terraform
+*/.terraform
+*/.tfstate
+*/.tfplan
+*.backup
+*.plan
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+### OTHER ###
+/temp
+**/*/plugins/*
+.DS_Store
+tools/**/local-*
+tools/install/temp
+tools/install/users.csv
+.env
+*.log
