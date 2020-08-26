@@ -8,7 +8,8 @@ Repo running on WSL 2 Ubuntu 18.04
 ## Setup
 ### Configure
 Update the environment *.env files to point to the full path of the *.json endpoint files.
-NOTE: using a Windows mounted path from WSL does not work.
+
+Note: using a Windows mounted path from WSL does not work.
 
 Update the environment *.env files with the TF_VAR_SUBSCRIPTION_ID, TF_VAR_TENANT_ID and TF_VAR_LOCATION.
 
@@ -41,6 +42,7 @@ Blob: 02_base/01_net (https://azstackstore.blob.core.windows.net/azstfrs/02_base
 
 ### Destroy
 To remove the resources, run the 'terraform destroy --auto-approve' command in the previous folders in reverse order.
+
 Notes: 
 * If the environment is completely recreated, a new Access Key will be generated, update will be necessary.
 * If changing the Access Key, the .terraform folder in that deployment modeule will have to be deleted before init.
