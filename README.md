@@ -1,5 +1,4 @@
-# terraform-azurestack
-## Descrption
+# Terraform azurerm using azurestackcloud provider 
 Terraform azurerm provider using local Azure stack for public and usgov endpoints.
 
 ## Local development environment
