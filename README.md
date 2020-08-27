@@ -31,6 +31,8 @@ Storage account: azstackstore\
 Access key\
 The access key can be added to the provider.tf, environment\dev\dev.env file or used in the init reconfigure below.
 3. $ terraform init
+
+Using the access key directly (not saved in the code)
 ```
 terraform init -reconfigure \
     -backend-config="access_key=accessKeyFromAzureStorageAccountLength88Char==" \
@@ -40,6 +42,18 @@ terraform init -reconfigure \
     -backend-config="container_name=${TF_VAR_BACKEND_CONTAINER_NAME}" \
     -backend-config="key=02_base/01_net"
 ```
+
+Using the dev.env environment variable
+```
+terraform init -reconfigure \
+    -backend-config="access_key=${TF_VAR_ACCESS_KEY}" \
+    -backend-config="subscription_id=${TF_VAR_SUBSCRIPTION_ID}" \
+    -backend-config="resource_group_name=${TF_VAR_BACKEND_RESOURCE_GROUP_NAME}" \
+    -backend-config="storage_account_name=${TF_VAR_BACKEND_STORAGE_ACCOUNT_NAME}" \
+    -backend-config="container_name=${TF_VAR_BACKEND_CONTAINER_NAME}" \
+    -backend-config="key=02_base/01_net"
+```
+
 4. $ terraform plan
 5. $ terraform apply --auto-approve
 6. Confirm resource creation and the remote state is saved in the storage account container
