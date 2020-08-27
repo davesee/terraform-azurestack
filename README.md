@@ -42,7 +42,7 @@ terraform init -reconfigure \
     -backend-config="storage_account_name=${TF_VAR_BACKEND_STORAGE_ACCOUNT_NAME}" \
     -backend-config="container_name=${TF_VAR_BACKEND_CONTAINER_NAME}" \
     -backend-config="key=02_base/01_net" \
-    -backend-config="access_key_string=ReplaceMeWithTheAccessKeyFromAzureStorageAccountLength88CharsHere=="
+    -backend-config="access_key=ReplaceMeWithTheAccessKeyFromAzureStorageAccountLength88CharsHere=="
 ```
 
 Confirm by accessing the Azure portal\
