@@ -14,17 +14,16 @@ provider "azuread" {
 terraform {
   required_version = ">= v0.12.26"
   backend "azurerm" {
-    resource_group_name  = "azstack-remote-state"
-    storage_account_name = "azstackstore"
-    container_name       = "azstfrs"
-    key                  = "02_base/01_net"
-
     /*
-      Azure stack using terraform azurerm provider
-      access_key is retrieved from the BACKEND_STORAGE_ACCOUNT > Access keys > Key value
-      select Azure stack vars from .env file > TERRAFORM global > Azurestack
+      Azure stack using terraform azurerm provider.
+      1. access_key is retrieved from the BACKEND_STORAGE_ACCOUNT > Access keys > Key value
+      2. terraform init -reconfigure with values as described in README.md
     */
     environment          = "AZURESTACKCLOUD" 
-    access_key           = "ReplaceMeWithTheAccessKeyFromAzureStorageAccountLength88CharsHere=="
+    # access_key           = var.state_access_key             // "accessKeyFromAzureStorageAccountLength88Char=="
+    # resource_group_name  = var.state_resource_group_name    // "azstack-remote-state"
+    # storage_account_name = var.state_storage_account_name   // "azstackstore"
+    # container_name       = var.state_container_name         // "azstfrs"
+    # key                  = var.state_key_06_database        // "02_base/01_net"
   }
 }
