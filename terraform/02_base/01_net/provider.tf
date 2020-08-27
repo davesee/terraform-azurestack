@@ -20,7 +20,8 @@ terraform {
       2. terraform init -reconfigure with values as described in README.md
     */
     environment          = "AZURESTACKCLOUD" 
-    # access_key           = var.state_access_key             // "accessKeyFromAzureStorageAccountLength88Char=="
+    //access_key           = "accessKeyFromAzureStorage=="    // (option 1 to test only, not reocmmended for production)
+    # access_key           = var.state_access_key             // (option 2 pass value via init -reconfigure as string or env var ref)
     # resource_group_name  = var.state_resource_group_name    // "azstack-remote-state"
     # storage_account_name = var.state_storage_account_name   // "azstackstore"
     # container_name       = var.state_container_name         // "azstfrs"
