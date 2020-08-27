@@ -24,17 +24,13 @@ This is a one time initialization of the storage and the state is stored in teh 
 1. $ terraform apply --auto-approve
 
 Create the remote state backed resource. A sample is provided in 02_bas0\1_net
-1. Navigate to the 02_base\1_net folder
-1. Update the provider.tf with the storage account access key retrieved from:\
+1. Navigate to the 02_base\1_net folder\
+2. Retrieve the storage account access key from:\
 Resource group: azstack-remote-state\
 Storage account: azstackstore\
-Access key  
-1. $ terraform init
-1. $ terraform plan
-1. $ terraform apply --auto-approve
-1. The remote state is updated with the state of this terraform
-
-Note: The access key should be placed in Azure Key vault or passed in using the terraform init reconfigure command as provided below. This follows best security practices and keeps your secret safe and out of code/source control.
+Access key\
+The access key can be added to the provider.tf, environment\dev\dev.env file or used in the init reconfigure below.
+3. $ terraform init
 ```
 terraform init -reconfigure \
     -backend-config="access_key=accessKeyFromAzureStorageAccountLength88Char==" \
@@ -44,6 +40,12 @@ terraform init -reconfigure \
     -backend-config="container_name=${TF_VAR_BACKEND_CONTAINER_NAME}" \
     -backend-config="key=02_base/01_net"
 ```
+4. $ terraform plan
+5. $ terraform apply --auto-approve
+6. Confirm resource creation and the remote state is saved in the storage account container
+
+Note: The access key should be placed in Azure Key vault or passed in using the terraform init reconfigure command as provided below. This follows best security practices and keeps your secret safe and out of code/source control.
+
 
 Confirm by accessing the Azure portal\
 Resource group: azstack-remote-state\
