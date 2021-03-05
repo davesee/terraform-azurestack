@@ -16,13 +16,13 @@ Note: using a Windows mounted path from WSL does not work in step 1.
 
 ### Deploy
 Create the remote storage infrastructure. 
-This is a one time initialization of the storage and the state is stored in teh local folder.
+This is a one time initialization of the storage and it's state is stored in your local folder.
 1. Navigate to the 01_init folder
 1. $ terraform init
 1. $ terraform plan
 1. $ terraform apply --auto-approve
 
-Create the remote state backed resource. A sample is provided in 02_bas0\1_net
+Create the remote state backed resource. A sample is provided in 02_base\1_net
 1. Navigate to the 02_base\1_net folder\
 2. Retrieve the storage account access key from:\
 Resource group: azstack-remote-state\
